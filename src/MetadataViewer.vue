@@ -1,42 +1,38 @@
 <template>
     <v-card>
-    <!-- Header: Titel + Close-Button -->
+    <!-- Header: Titel -->
     <v-card-title class="d-flex justify-space-between align-center">
-      <div class="title-text">
+      <div class="title-text px-4">
         {{ 'Metadaten: ' + (metadata?.properties?.title || 'Metadaten') }}
       </div>
-      <v-btn icon @click="closeDialog">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
     </v-card-title>
 
     <!-- Keywords + Lizenz -->
     <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4">
       <!-- Keywords links -->
       <div class="keywords">
-        <v-chip
+        <VChip
           v-for="(kw, idx) in metadata?.properties?.keywords || []"
           :key="idx"
-          color="secondary"
+          style="background-color: base-lighten-3; color: blue;"
           variant="tonal"
-          class="custom-chip"
         >
           {{ kw }}
-        </v-chip>
+        </VChip>
       </div>
 
       <!-- Lizenz rechts -->
-      <div class="license">
-        <v-chip
+      <div class="license">        
+        <VChip
           v-if="licenseLink"
           :href="licenseLink"
           target="_blank"
           variant="tonal"
-          color="primary"
+          style="background-color: base-lighten-3; color: red;"
           class="license-chip"
         >
-          <v-icon left class="icon-bold">mdi-copyright</v-icon>
-        </v-chip>
+          <VIcon left class="icon-bold">mdi-copyright</VIcon>
+        </VChip>
         <span v-else>–</span>
       </div>
     </div>
@@ -48,7 +44,6 @@
         <p>{{ metadata.properties.description }}</p>
 
         <!-- Kontakte (nur Publisher) -->
-        <!-- <p class="text-center"><strong>Kontakt:</strong></p> -->
         <div v-if="publisher" class="d-flex justify-center">
           <v-list dense class="publisher-list">
             <v-list-item class="d-flex flex-column align-center">
@@ -67,7 +62,7 @@
                     :href="`mailto:${email.value}`"
                     target="_blank"
                   >
-                    <v-icon left class="icon-bold">mdi-email</v-icon>
+                    <VIcon left class="icon-bold">mdi-email</VIcon>
                     {{email.value }}
                   </v-chip>
                 </v-list-item-subtitle>
@@ -80,7 +75,6 @@
 
       <!-- Ladeindikator -->
       <div v-else class="text-center pa-4">
-        <v-progress-circular indeterminate color="primary"></v-progress-circular>
         <div>Lade Metadaten...</div>
       </div>
     </v-card-text>
@@ -90,17 +84,21 @@
 <script setup>
 import { ref, computed } from 'vue';
 import 'vuetify/styles';
-
+import {
+    VSheet,
+    VDivider,
+    VIcon,
+    VCard,
+    VCardText,
+    VChip
+  } from 'vuetify/components';
 
 const props = defineProps({
-    infoUrl: {type: string, required: true}
+    infoUrl: {type: String, required: true}
 });
 
-
-const dialog = ref(false);
 const metadata = ref(null);
 
-const METADATA_URL = 'https://geo.sv.rostock.de/metadata/collections/service/items/5b4014de-8d15-4f23-831e-25ea9abec3a7?f=json';
 
 const openDialog = async () => {
   if (!metadata.value) {
@@ -115,9 +113,6 @@ const openDialog = async () => {
 };
 openDialog();
 
-const closeDialog = () => {
-  dialog.value = false;
-};
 
 const publisher = computed(() => {
   if (!metadata.value?.properties?.contacts) return null;
