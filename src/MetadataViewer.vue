@@ -2,13 +2,13 @@
     <v-card>
     <!-- Header: Titel -->
     <v-card-title class="d-flex justify-space-between align-center">
-      <div class="title-text px-4">
+      <div class="title-text px-4 text-h5 font-weight-bold">
         {{ 'Metadaten: ' + (metadata?.properties?.title || 'Metadaten') }}
       </div>
     </v-card-title>
 
     <!-- Keywords + Lizenz -->
-    <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4">
+    <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4 py-2">
       <!-- Keywords links -->
       <div class="keywords">
         <VChip
@@ -44,7 +44,7 @@
         <p>{{ metadata.properties.description }}</p>
 
         <!-- Kontakte (nur Publisher) -->
-        <div v-if="publisher" class="d-flex justify-center">
+        <div v-if="publisher" class="d-flex justify-center pa-4">
           <v-list dense class="publisher-list">
             <v-list-item class="d-flex flex-column align-center">
               <v-list-item-content class="text-center">
