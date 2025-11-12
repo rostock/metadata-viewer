@@ -62,6 +62,10 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
             props: {
               infoUrl: this._infoUrl,
             },
+            state: {
+              headerTitle: 'Metadaten',
+              headerIcon: '$vcsInfo'
+            },            
             slot: WindowSlot.DYNAMIC_CHILD,
           },
           
