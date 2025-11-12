@@ -2,8 +2,8 @@
     <v-card>
     <!-- Header: Titel -->
     <v-card-title class="d-flex justify-space-between align-center">
-      <div class="title-text px-4 text-h5 font-weight-bold">
-        {{ 'Metadaten: ' + (metadata?.properties?.title || 'Metadaten') }}
+      <div class="title-text px-4 text-h6 font-weight-bold">
+        {{ metadata?.properties?.title || 'Metadaten' }}
       </div>
     </v-card-title>
 
@@ -63,7 +63,7 @@
                     target="_blank"
                   >
                     <VIcon left class="icon-bold">mdi-email</VIcon>
-                    {{email.value }}
+                    &nbsp;{{email.value }}
                   </v-chip>
                 </v-list-item-subtitle>
               </v-list-item-content>

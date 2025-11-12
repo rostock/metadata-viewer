@@ -38,20 +38,6 @@ export default function plugin(config, baseUrl) {
         state,
       );
       vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, ContentTreeItemMetadata.className, ContentTreeItemMetadata);
-      console.log(vcsUiApp.contentTreeClassRegistry);
-      vcsUiApp.contentTree.parseItems([
-        {
-          "type": "ContentTreeItemMetadata",
-          "name": "hintergrundkarten.ORKa-MV",
-          "title": "ORKa-MV!!",
-          "layerName": "ORKa-MV",
-          "infoUrl": "https://leichtwind.de",
-          "allowedWMSLayers": [
-            "orkamv"
-          ],
-          "showWhenNotSupported": true
-        }
-      ],vcsUiApp.dynamicModuleId);
     },
     /**
      * @param {import("@vcmap/ui").VcsUiApp} vcsUiApp

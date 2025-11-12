@@ -56,6 +56,7 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
           },
           {
             id: 'metadataWindow',
+            headerTitle: 'Metadaten',
             parentId: defaultContentTreeComponentId,
             component: MetadataViewer,
             props: {
@@ -63,9 +64,11 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
             },
             slot: WindowSlot.DYNAMIC_CHILD,
           },
+          
           this._app.windowManager,
-          'myPlugin',
+          'metadataviewer',
         );
+        console.log(this._app.windowManager);
         this._destroyAction = destroy;
 
         // remove default info action from ContentTreeItem
