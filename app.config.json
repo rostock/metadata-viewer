@@ -172,7 +172,7 @@
           "type": "ContentTreeItemMetadata",
           "name": "hintergrundkarten.ORKa-MV",
           "title": "ORKa-MV",
-          "infoUrl": "https://geo.sv.rostock.de/metadata/collections/service/items/5b4014de-8d15-4f23-831e-25ea9abec3a7?f=json",
+          "infoUrl": "recordapi:https://geo.sv.rostock.de/metadata/collections/service/items/5b4014de-8d15-4f23-831e-25ea9abec3a7?f=json",
           "layerName": "ORKa-MV",
           "allowedWMSLayers": [
             "orkamv"

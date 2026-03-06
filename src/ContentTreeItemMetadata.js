@@ -56,7 +56,6 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
           },
           {
             id: 'metadataWindow',
-            headerTitle: 'Metadaten',
             parentId: defaultContentTreeComponentId,
             component: MetadataViewer,
             props: {
@@ -66,7 +65,7 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
               headerTitle: 'Metadaten',
               headerIcon: '$vcsInfo'
             },            
-            slot: WindowSlot.DYNAMIC_CHILD,
+            slot: WindowSlot.DYNAMIC_LEFT,
           },
           
           this._app.windowManager,

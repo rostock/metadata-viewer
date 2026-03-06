@@ -2,7 +2,7 @@
     <v-card>
     <!-- Header: Titel -->
     <v-card-title class="d-flex justify-space-between align-center">
-      <div class="title-text px-4 text-h6 font-weight-bold">
+      <div class="title-text px-4 text-h7 font-weight-bold">
         {{ metadata?.properties?.title || 'Metadaten' }}
       </div>
     </v-card-title>
@@ -101,14 +101,27 @@ const metadata = ref(null);
 
 
 const openDialog = async () => {
+  console.log(props.infoUrl);
   if (!metadata.value) {
+    console.log(metadata.value)
     try {
-      const res = await fetch(props.infoUrl);
+      let requestURL;
+      if(props.infoUrl.startsWith("recordapi:")) {
+        console.log("RecordAPI");
+        requestURL =props.infoUrl.replace("recordapi:","");
+      }
+      else if (props.infoUrl.startsWith("capabilties:")) {
+        console.log("capabilities");
+      };
+      console.log(requestURL);
+      const res = await fetch(requestURL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       metadata.value = await res.json();
     } catch (err) {
       console.error('Fehler beim Laden der Metadaten:', err);
     }
+  } else {
+    console.log("hehuhuas");
   }
 };
 openDialog();
