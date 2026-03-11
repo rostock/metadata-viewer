@@ -14,7 +14,7 @@ import ContentTreeItemMetadata from './ContentTreeItemMetadata.js';
  */
 export default function plugin(config, baseUrl) {
   // eslint-disable-next-line no-console
-  console.log(config, baseUrl);
+  
   return {
     get name() {
       return name;
@@ -37,7 +37,7 @@ export default function plugin(config, baseUrl) {
         vcsUiApp,
         state,
       );
-      vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, ContentTreeItemMetadata.className, ContentTreeItemMetadata);
+      
     },
     /**
      * @param {import("@vcmap/ui").VcsUiApp} vcsUiApp
@@ -49,6 +49,7 @@ export default function plugin(config, baseUrl) {
         'Called when the root UI component is mounted and managers are ready to accept components',
         vcsUiApp,
       );
+      vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, ContentTreeItemMetadata.className, ContentTreeItemMetadata);
     },
     /**
      * should return all default values of the configuration

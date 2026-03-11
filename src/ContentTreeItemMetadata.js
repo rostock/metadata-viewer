@@ -48,6 +48,7 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
 
       if (this._infoUrl) {
         this._destroyAction?.();
+        const iconId = this.name.replace(" ","");
         const { action, destroy } = createToggleAction(
           {
             name,
@@ -55,7 +56,7 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
             icon: '$vcsInfo',
           },
           {
-            id: 'metadataWindow',
+            id: iconId,
             parentId: defaultContentTreeComponentId,
             component: MetadataViewer,
             props: {
@@ -71,7 +72,6 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
           this._app.windowManager,
           'metadataviewer',
         );
-        console.log(this._app.windowManager);
         this._destroyAction = destroy;
 
         // remove default info action from ContentTreeItem
