@@ -3,7 +3,7 @@
     <!-- Header: Titel -->
     <v-card-title class="d-flex justify-space-between align-center">
       <div class="title-text px-4 text-h7 font-weight-bold">
-        {{ metadata?.properties?.title || 'Metadaten' }}
+        {{ jsonObject?.title || 'Metadaten' }}
       </div>
     </v-card-title>
 
@@ -12,7 +12,7 @@
       <!-- Keywords links -->
       <div class="keywords">
         <VChip
-          v-for="(kw, idx) in metadata?.properties?.keywords || []"
+          v-for="(kw, idx) in jsonObject?.tags || []"
           :key="idx"
           style="background-color: base-lighten-3; color: blue;"
           variant="tonal"
@@ -24,8 +24,8 @@
       <!-- Lizenz rechts -->
       <div class="license">
         <VChip
-          v-if="licenseLink"
-          :href="licenseLink"
+          v-if="jsonObject.license"
+          :href="jsonObject.license"
           target="_blank"
           variant="tonal"
           style="background-color: base-lighten-3; color: red;"
@@ -39,28 +39,26 @@
 
     <!-- Inhalt: Metadaten direkt -->
     <v-card-text class="pa-4">
-      <div v-if="metadata">
+      <div v-if="jsonObject">
         <!-- Beschreibung -->
-        <p>{{ metadata.properties.description }}</p>
+        <p>{{ jsonObject?.description }}</p>
 
         <!-- Kontakte (nur Publisher) -->
-        <div v-if="publisher" class="d-flex justify-center pa-4">
+        <div v-if="jsonObject.publisher_organization" class="d-flex justify-center pa-4">
           <v-list dense class="publisher-list">
             <v-list-item class="d-flex flex-column align-center">
-              <v-list-item-subtitle v-if="publisher.organization">{{ publisher.organization }}</v-list-item-subtitle>
-              <v-list-item-title v-if="publisher.name">{{ publisher.name }}</v-list-item-title>
-              <v-list-item-subtitle v-if="publisher.emails?.length">
+              <v-list-item-subtitle v-if="jsonObject.publisher_organization">{{ jsonObject.publisher_organization }}</v-list-item-subtitle>
+              <v-list-item-title v-if="jsonObject.publisher_name">{{ jsonObject.publisher_name }}</v-list-item-title>
+              <v-list-item-subtitle v-if="jsonObject.publisher_email">
                 <v-chip
-                  v-for="(email, i) in publisher.emails"
-                  :key="i"
                   color="primary"
                   variant="tonal"
                   class="email-chip"
-                  :href="`mailto:${email.value}`"
+                  :href="`mailto:${jsonObject.publisher_email}`"
                   target="_blank"
                 >
                   <VIcon class="icon-bold">mdi-email</VIcon>
-                  &nbsp;{{ email.value }}
+                  &nbsp;{{ jsonObject.publisher_email }}
                 </v-chip>
               </v-list-item-subtitle>
             </v-list-item>
@@ -100,36 +98,59 @@ const props = defineProps({
 
 const metadata = ref(null);
 
+const jsonObject = ref();
+jsonObject.value = {
+  "title": "",
+  "description": "",
+  "publisher_organization": "",
+  "publisher_email": "",
+  "license":"",
+  "tags": [],
+  "authors": []    
+};
+
+const author = {
+  "author_name":"",
+  "author_mail":"",
+  "author_organization":"",
+  "last_update":"",
+  "update_frequency":""
+};
+
 const openDialog = async () => {
-  if (!metadata.value) {
-    try {
-      let requestURL;
-      if (props.infoUrl.startsWith("recordapi:")) {
-        requestURL = props.infoUrl.replace("recordapi:", "");
-      } else if (props.infoUrl.startsWith("capabilities:")) {
-        // TODO: capabilities handling
-      }
+  try {
+    let requestURL;
+    if (props.infoUrl.startsWith("recordapi:")) {
+      requestURL = props.infoUrl.replace("recordapi:", "");
       const res = await fetch(requestURL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      metadata.value = await res.json();
+      const metadataResponse = await res.json();
+      console.log( metadataResponse);
+      jsonObject.value.title = metadataResponse?.properties?.title || "Metadaten";
+      jsonObject.value.description = metadataResponse?.properties?.description;
+      jsonObject.value.license = metadataResponse?.properties?.license;
+      jsonObject.value.tags = metadataResponse?.properties?.keywords;
+
+      if (metadataResponse?.properties?.contacts) {
+        const publisher = metadataResponse.properties.contacts.find(c => c.roles?.includes('publisher'));
+        console.log("Publisher:", publisher);
+        if (publisher) {
+          jsonObject.value.publisher_organization = publisher?.organization;
+          jsonObject.value.publisher_name = publisher?.name || null;
+          jsonObject.value.publisher_email = publisher?.emails?.[0]?.value || null;
+        }
+      };
+      // TODO: Add Authors from repository
+    } else if (props.infoUrl.startsWith("capabilities:")) {
+      // TODO: capabilities handling
+    }
+    
     } catch (err) {
       console.error('Fehler beim Laden der Metadaten:', err);
-    }
-  }
-};
+    };
+}
 openDialog();
 
-const publisher = computed(() => {
-  if (!metadata.value?.properties?.contacts) return null;
-  return metadata.value.properties.contacts.find(c => c.roles?.includes('publisher'));
-});
-
-const licenseLink = computed(() => {
-  if (!metadata.value?.links) return null;
-  //const link = metadata.value.links.find(l => l.rel === 'license');
-  const link = metadata.value.properties.license;
-  return link || null;
-});
 </script>
 
 <style>
