@@ -166,7 +166,7 @@
           "name": "hintergrundkarten.liegenschaftskarte",
           "title": "liegenschaftskarte",
           "layerName": "liegenschaftskarte",
-          "infoUrl": "recordapi:https://geo.sv.rostock.de/metadata/collections/service/items/5117efa9-6ace-456c-8e00-e71b8c3c6018?f=json",
+          "infoUrl": "datenwerft:https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/get-by-uuid/5117efa9-6ace-456c-8e00-e71b8c3c6018",
           "allowedWMSLayers": [
             "hro.liegenschaftskarte.liegenschaftskarte"
           ],
@@ -223,7 +223,8 @@
           "name": "bauenUndStadtplanung.bauwerke",
           "title": "bauwerke",
           "layerName": "bauwerke",
-          "infoUrl": "recordapi:https://geo.sv.rostock.de/metadata/collections/service/items/2fbc5e31-86a5-4935-9f06-6958373474c3?f=json",
+          "infoUrl": "datenwerft:https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/get-by-uuid/47083472-0067-4f14-a0ce-b1d649598224",
+      
           "allowedWMSLayers": [
             "hro.bauwerke.bauwerke"
           ],
