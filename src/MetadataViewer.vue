@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="overflow-y-auto">
     <!-- Zentraler Div, der die geladenen Daten beinhaltet-->
     <div v-if="metadata.title">
     <!-- Header: Titel -->
