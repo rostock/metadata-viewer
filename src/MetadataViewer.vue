@@ -81,9 +81,9 @@
     
     </v-card-text>
   </div>
-  <!-- Ladeindikator statt des Zentralen Div-->
+  <!-- Statusindikator und Fallback statt des Zentralen Div-->
   <div v-else class="text-center pa-4">
-    <div>Lade Metadaten...</div>
+    <div>{{status}}</div>
   </div>
   </v-card>
 </template>
@@ -125,6 +125,9 @@ jsonObject.value = {
   "last_update":"",
   "update_frequency":""   
 };
+
+let status = ref()
+status.value = "Lade Metadaten..."
 
 
 
@@ -227,6 +230,7 @@ async function openDialog(){
     }
     } catch (err) {
       console.error('Fehler beim Laden der Metadaten:', err);
+      status.value = "Keine Metadateninformationen vorhanden."
     };
 }
 
