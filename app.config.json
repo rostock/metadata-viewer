@@ -209,7 +209,7 @@
           "name": "bauenUndStadtplanung.baudenkmaleUndDenkmalbereiche",
           "title": "baudenkmaleUndDenkmalbereiche",
           "layerName": "baudenkmaleUndDenkmalbereiche",
-          "infoUrl": "recordapi:https://geo.sv.rostock.de/metadata/collections/service/items/0b78134f-3d6f-4a29-8b37-4f440c18b42e?f=json",
+          "infoUrl": "datenwerft:https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/get-by-uuid/0b78134f-3d6f-4a29-8b37-4f440c18b42e",
           "allowedWMSLayers": [
             "hro.baudenkmale_denkmalbereiche.denkmalbereiche",
             "hro.baudenkmale_denkmalbereiche.baudenkmale"

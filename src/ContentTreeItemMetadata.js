@@ -67,6 +67,9 @@ class ContentTreeItemMetadata extends LayerContentTreeItem {
               headerIcon: '$vcsInfo'
             },            
             slot: WindowSlot.DYNAMIC_LEFT,
+            position:{
+              width: '400px',
+            },
           },
           
           this._app.windowManager,

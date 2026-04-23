@@ -2,89 +2,128 @@
   <v-card class="overflow-y-auto">
     <!-- Zentraler Div, der die geladenen Daten beinhaltet-->
     <div v-if="metadata.title">
-    <!-- Header: Titel -->
-    <v-card-title class="d-flex justify-space-between align-center">
-      <div class="title-text px-4 text-h7 font-weight-bold">
-        {{ metadata.title || 'Metadaten' }}
-      </div>
-    </v-card-title>
-    <!-- Keywords + Lizenz -->
-    <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4 py-2">
-      <!-- Keywords links -->
-      <div class="keywords">
-        <VChip
-          v-for="(kw, idx) in metadata.tags || []"
-          :key="idx"
-          style="background-color: base-lighten-3; color: blue;"
-          variant="tonal"
-        >
-          {{ kw }}
-        </VChip>
+      <!-- Header: Titel -->
+      <v-card-title class="d-flex justify-space-between align-center">
+        <div class="title-text px-4 text-h7 font-weight-bold">
+          {{ metadata.title || 'Metadaten' }}
+        </div>
+      </v-card-title>
+      <!-- Keywords + Lizenz -->
+      <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4 py-2">
+        <!-- Keywords links -->
+        <div class="keywords">
+          <VChip
+            v-for="(kw, idx) in metadata.tags || []"
+            :key="idx"
+            style="background-color: base-lighten-3; color: blue;"
+            variant="tonal"
+          >
+            {{ kw }}
+          </VChip>
+        </div>
+
+        <!-- Lizenz rechts -->
+        <div class="license">
+          <VChip
+            v-if="metadata.license"
+            :href="metadata.license"
+            target="_blank"
+            variant="tonal"
+            style="background-color: base-lighten-3; color: red;"
+            class="license-chip"
+          >
+            <VIcon class="icon-bold">mdi-copyright</VIcon>
+          </VChip>
+        </div>
       </div>
 
-      <!-- Lizenz rechts -->
-      <div class="license">
-        <VChip
-          v-if="metadata.license"
-          :href="metadata.license"
-          target="_blank"
-          variant="tonal"
-          style="background-color: base-lighten-3; color: red;"
-          class="license-chip"
-        >
-          <VIcon class="icon-bold">mdi-copyright</VIcon>
-        </VChip>
-      <!--<span v-else>–</span>-->
-      </div>
+      <!-- Inhalt: Metadaten direkt -->
+      <v-card-text class="pa-4">
+        <div v-if="metadata">
+          <!-- Beschreibung -->
+          <p>{{ metadata.description }}</p>
+
+          <!-- Kontakte (nur Publisher) -->
+          <div v-if="metadata.publisher_organization" class="d-flex justify-center pa-4">
+            <p dense class="publisher-list">
+              <p class="d-flex flex-column align-center">
+                <p v-if="metadata.publisher_organization">{{ metadata.publisher_organization }}</p>
+                <p v-if="metadata.publisher_name">{{ metadata.publisher_name }}</p>
+                <p v-if="metadata.publisher_email">
+                  <v-chip
+                    color="primary"
+                    variant="tonal"
+                    class="email-chip"
+                    :href="`mailto:${metadata.publisher_email}`"
+                    target="_blank"
+                  >
+                    <VIcon class="icon-bold">mdi-email</VIcon>
+                    &nbsp;{{ metadata.publisher_email }}
+                  </v-chip>
+                </p>
+              </p>
+            </p>
+          </div>
+
+          <!-- Datenquellen -->
+          <div v-if="metadata.repositories[0]">
+            <br><hr><br>
+            <p v-for="(repository, repo_index) in metadata.repositories">
+              <span class="highlight">Datenquelle:</span><br>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="highlight">Letzte Aktualisierung: </span> 
+                    </td>
+                    <td>{{ repository.last_update }}</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="highlight">Aktualisierungsfrequenz: </span> 
+                    </td>
+                    <td>{{ repository.update_frequency }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <!-- Autoren -->
+              <div v-if="repository.authors" class="d-flex justify-left py-4">
+                <v-list class="author-list">
+                <v-list-item-title><span class="highlight">Autoren:</span></v-list-item-title>
+                  <v-list-item v-for=" author in repository.authors ">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td><span class="highlight">Name: </span></td><td>{{ author.author_name }}</td>
+                          </tr>
+                          <tr>
+                            <td><span class="highlight">E-Mail: </span></td><td>{{ author.author_mail }}</td>
+                          </tr>
+                          <tr>
+                            <td><span class="highlight">Organisation: </span></td><td>{{ author.author_organization }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- Name: {{ author.author_name }} <br> E-Mail: {{ author.author_mail }} <br> Organisation: {{ author.author_organization }} -->
+                    </v-list-item>
+                </v-list>
+              </div>
+              <br><hr><br>
+            </p>
+          </div>
+          <div v-else class="text-center pa-4">
+            <p>Keine Informationen zur Datenquelle verfügbar</p>
+          </div>
+        </div>
+      </v-card-text>
     </div>
-
-    <!-- Inhalt: Metadaten direkt -->
-    <v-card-text class="pa-4">
-      <div v-if="metadata">
-        <!-- Beschreibung -->
-        <p>{{ metadata.description }}</p>
-
-        <!-- Autoren -->
-        <div v-if="metadata.authors" class="d-flex justify-left py-4">
-          <v-list class="author-list">
-            <v-list-item class="d-flex flex-column align-center">
-              <v-list-item-title v-if="metadata.authors[0]">Autoren:</v-list-item-title>
-              <v-list-item-title v-else >Keine Autoreninformationen vorhanden</v-list-item-title>
-              <v-list-item v-for=" author in metadata.authors ">Name: {{ author.author_name }} <br> E-Mail: {{ author.author_mail }} <br> Organisation: {{ author.author_organization }} </v-list-item>
-            </v-list-item>
-          </v-list>
-        </div>
-
-        <!-- Kontakte (nur Publisher) -->
-        <div v-if="metadata.publisher_organization" class="d-flex justify-left pa-4">
-          <v-list dense class="publisher-list">
-            <v-list-item class="d-flex flex-column align-center">
-              <v-list-item-subtitle v-if="metadata.publisher_organization">{{ metadata.publisher_organization }}</v-list-item-subtitle>
-              <v-list-item-title v-if="metadata.publisher_name">{{ metadata.publisher_name }}</v-list-item-title>
-              <v-list-item-subtitle v-if="metadata.publisher_email">
-                <v-chip
-                  color="primary"
-                  variant="tonal"
-                  class="email-chip"
-                  :href="`mailto:${metadata.publisher_email}`"
-                  target="_blank"
-                >
-                  <VIcon class="icon-bold">mdi-email</VIcon>
-                  &nbsp;{{ metadata.publisher_email }}
-                </v-chip>
-              </v-list-item-subtitle>
-            </v-list-item>
-          </v-list>
-        </div>
-      </div>
-      
-    
-    </v-card-text>
-  </div>
-  <!-- Statusindikator und Fallback statt des Zentralen Div-->
-  <div v-else class="text-center pa-4">
-    <div>{{status}}</div>
-  </div>
+  
+  
+    <!-- Statusindikator und Fallback statt des Zentralen Div-->
+    <div v-else class="text-center pa-4">
+      <div>{{status}}</div>
+    </div>
   </v-card>
 </template>
 
@@ -105,6 +144,7 @@ import {
   VListItemSubtitle,
 } from 'vuetify/components';
 import { toString } from 'ol/transform';
+import { VcsDataTable, VcsTable } from '@vcmap/ui';
 
 const props = defineProps({
   infoUrl: { type: String, required: true }
@@ -121,9 +161,7 @@ jsonObject.value = {
   "publisher_email": "",
   "license":"",
   "tags": [],
-  "authors": [],
-  "last_update":"",
-  "update_frequency":""   
+  "repositories": [],
 };
 
 let status = ref()
@@ -198,34 +236,52 @@ async function openDialog(){
           const json_tags_data = await request(tag)
           jsonObject.value.tags.push(json_tags_data.title)
         }
+        
+      // TODO: Add Handling for multiple repos and display of repo info
 
-        // get repo/update info
+        // get repo info 
         const requestURLRepo = requestData.repositories
-        const json_repo_data = await request(requestURLRepo)
-        jsonObject.last_update = json_repo_data.last_update
-        const requestURLUpdateFrequency = json_repo_data.update_frequency
-        const json_updateFrequency_data = await request(requestURLUpdateFrequency)
-        jsonObject.value.update_frequency = json_updateFrequency_data.title
+        for (const repo of requestURLRepo){
+          const repository = {
+            "authors": [],
+            "last_update":"",
+            "update_frequency":""
+          }
+
+          // get update info
+          const json_repo_data = await request(repo)
+          // format date to DD/MM/YYYY
+          const last_update = new Date(json_repo_data.last_update)
+          const date_formated = new Intl.DateTimeFormat("en-GB").format(last_update)        
+          repository.last_update = date_formated
+          const requestURLUpdateFrequency = json_repo_data.update_frequency
+          const json_updateFrequency_data = await request(requestURLUpdateFrequency)
+          repository.update_frequency = json_updateFrequency_data.title          
        
-        // get authors info
-        const requestURLAuthors = json_repo_data.authors
-        for (const author of requestURLAuthors){
-          const authorJSON = {
-            "author_name":"",
-            "author_mail":"",
-            "author_organization":"",
-          };
-          const json_author_data = await request(author)
-          authorJSON.author_name = json_author_data.first_name+" "+json_author_data.last_name
-          authorJSON.author_mail = json_author_data.email
-          const json_author_organization_data = await request(json_author_data.organization)
-          authorJSON.author_organization = json_author_organization_data.title
-          jsonObject.value.authors.push(authorJSON)
+          // get authors info
+          const requestURLAuthors = json_repo_data.authors
+          for (const author of requestURLAuthors){
+            const authorJSON = {
+              "author_name":"",
+              "author_mail":"",
+              "author_organization":"",
+            };
+            const json_author_data = await request(author)
+            authorJSON.author_name = json_author_data.first_name+" "+json_author_data.last_name
+            authorJSON.author_mail = json_author_data.email
+            const json_author_organization_data = await request(json_author_data.organization)
+            authorJSON.author_organization = json_author_organization_data.title
+            repository.authors.push(authorJSON)
+            
+          }
+          // append repostitory to list of repositories of the main metadata object
+          jsonObject.value.repositories.push(repository)
         }
          
         
-        console.log(jsonObject)
+        
         metadata.value = jsonObject.value
+        console.log(metadata)
 
     }
     } catch (err) {
@@ -274,13 +330,26 @@ openDialog();
   font-size: 1.2em;
 }
 
-.publisher-list .v-list-item-title {
-  margin: 0.2rem 0;
-  font-weight: bold;
-}
-
-.publisher-list .v-list-item-subtitle {
+.publisher-list{
   font-size: 0.9rem;
+  font-weight: bold;
   color: #555;
 }
+
+span.highlight
+{
+font-weight:bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 3px;
+  text-align: left;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 </style>
