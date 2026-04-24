@@ -377,7 +377,9 @@
           "allowedWMSLayers": [
             "hro.sanierungsgebiete.sanierungsgebiete"
           ],
-          "showWhenNotSupported": false
+          "showWhenNotSupported": false,
+          "loadOnStartup": true,
+          "initOpen": false
         },
         {
           "type": "WMSGroupContentTreeItemMetadata",
