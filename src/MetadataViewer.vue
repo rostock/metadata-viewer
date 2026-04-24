@@ -45,8 +45,8 @@
 
           <!-- Kontakte (nur Publisher) -->
           <div v-if="metadata.publisher_organization" class="d-flex justify-center pa-4">
-            <p dense class="publisher-list">
-              <p class="d-flex flex-column align-center">
+            <div dense class="publisher-list">
+              <div class="d-flex flex-column align-center">
                 <p v-if="metadata.publisher_organization">{{ metadata.publisher_organization }}</p>
                 <p v-if="metadata.publisher_name">{{ metadata.publisher_name }}</p>
                 <p v-if="metadata.publisher_email">
@@ -61,14 +61,14 @@
                     &nbsp;{{ metadata.publisher_email }}
                   </v-chip>
                 </p>
-              </p>
-            </p>
+              </div>
+            </div>
           </div>
 
           <!-- Datenquellen -->
           <div v-if="metadata.repositories[0]">
             <br><hr><br>
-            <p v-for="(repository, repo_index) in metadata.repositories">
+            <div v-for="(repository, repo_index) in metadata.repositories" :key="repo_index">
               <span class="highlight">Datenquelle:</span><br>
               <table>
                 <tbody>
@@ -91,7 +91,7 @@
               <div v-if="repository.authors" class="d-flex justify-left py-4">
                 <v-list class="author-list">
                 <v-list-item-title><span class="highlight">Autoren:</span></v-list-item-title>
-                  <v-list-item v-for=" author in repository.authors ">
+                  <v-list-item v-for="(author, author_index) in repository.authors" :key="author_index">
                       <table>
                         <tbody>
                           <tr>
@@ -110,7 +110,7 @@
                 </v-list>
               </div>
               <br><hr><br>
-            </p>
+            </div>
           </div>
           <div v-else class="text-center pa-4">
             <p>Keine Informationen zur Datenquelle verfügbar</p>

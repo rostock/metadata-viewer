@@ -1,5 +1,6 @@
 import { name, version, mapVersion } from '../package.json';
-import ContentTreeItemMetadata from './ContentTreeItemMetadata.js';
+import LayerContentTreeItemMetadata from './LayerContentTreeItemMetadata.js';
+import WMSGroupContentTreeItemMetadata from './WMSGroupContentTreeItemMetadata.js';
 /**
  * @typedef {Object} PluginState
  * @property {any} prop
@@ -49,7 +50,8 @@ export default function plugin(config, baseUrl) {
         'Called when the root UI component is mounted and managers are ready to accept components',
         vcsUiApp,
       );
-      vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, ContentTreeItemMetadata.className, ContentTreeItemMetadata);
+      vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, WMSGroupContentTreeItemMetadata.className, WMSGroupContentTreeItemMetadata);
+      vcsUiApp.contentTreeClassRegistry.registerClass(vcsUiApp.dynamicModuleId, LayerContentTreeItemMetadata.className, LayerContentTreeItemMetadata);
     },
     /**
      * should return all default values of the configuration

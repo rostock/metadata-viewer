@@ -162,7 +162,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "hintergrundkarten.liegenschaftskarte",
           "title": "liegenschaftskarte",
           "layerName": "liegenschaftskarte",
@@ -173,7 +173,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "hintergrundkarten.Luftbild 2024 WMTS",
           "title": "Luftbild 2024 WMTS",
           "layerName": "Luftbild 2024 WMTS",
@@ -184,7 +184,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "hintergrundkarten.ORKa-MV",
           "title": "ORKa-MV",
           "layerName": "ORKa-MV",
@@ -205,7 +205,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.baudenkmaleUndDenkmalbereiche",
           "title": "baudenkmaleUndDenkmalbereiche",
           "layerName": "baudenkmaleUndDenkmalbereiche",
@@ -219,7 +219,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.bauwerke",
           "title": "bauwerke",
           "layerName": "bauwerke",
@@ -231,7 +231,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.bauwerkeMV",
           "title": "bauwerkeMV",
           "layerName": "bauwerkeMV",
@@ -242,7 +242,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.bebeauungsplaeneGeltungsbereiche",
           "title": "bebeauungsplaeneGeltungsbereiche",
           "layerName": "bebeauungsplaeneGeltungsbereiche",
@@ -258,7 +258,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.bodenrichtwertkarte",
           "title": "bodenrichtwertkarte",
           "layerName": "bodenrichtwertkarte",
@@ -285,7 +285,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.eisenbahnbetriebsanlagen",
           "title": "eisenbahnbetriebsanlagen",
           "layerName": "eisenbahnbetriebsanlagen",
@@ -299,7 +299,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.flaechennutzungsplaene",
           "title": "flaechennutzungsplaene",
           "layerName": "flaechennutzungsplaene",
@@ -333,7 +333,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.gebaeude",
           "title": "gebaeude",
           "layerName": "gebaeude",
@@ -344,7 +344,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "LayerContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.gebaeudeMV",
           "title": "gebaeudeMV",
           "layerName": "gebaeudeMV",
@@ -355,7 +355,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.hinweiseBuergerforenInnenentwicklung2019",
           "title": "hinweiseBuergerforenInnenentwicklung2019",
           "layerName": "hinweiseBuergerforenInnenentwicklung2019",
@@ -369,7 +369,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.sanierungsgebiete",
           "title": "sanierungsgebiete",
           "layerName": "sanierungsgebiete",
@@ -380,7 +380,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bauenUndStadtplanung.satzungen",
           "title": "satzungen",
           "layerName": "satzungen",
@@ -396,7 +396,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.begegnungszentren",
           "title": "begegnungszentren",
           "layerName": "begegnungszentren",
@@ -407,7 +407,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.behinderteneinrichtungen",
           "title": "behinderteneinrichtungen",
           "layerName": "behinderteneinrichtungen",
@@ -418,7 +418,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.beratungsstellen",
           "title": "beratungsstellen",
           "layerName": "beratungsstellen",
@@ -429,7 +429,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.bildungstraeger",
           "title": "bildungstraeger",
           "layerName": "bildungstraeger",
@@ -440,7 +440,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.hospize",
           "title": "hospize",
           "layerName": "hospize",
@@ -451,7 +451,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.kinder_jugendbetreuung",
           "title": "kinder_jugendbetreuung",
           "layerName": "kinder_jugendbetreuung",
@@ -462,7 +462,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.kinderbetreuungseinrichtungen",
           "title": "kinderbetreuungseinrichtungen",
           "layerName": "kinderbetreuungseinrichtungen",
@@ -477,7 +477,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.kindertagespflegeeinrichtungen",
           "title": "kindertagespflegeeinrichtungen",
           "layerName": "kindertagespflegeeinrichtungen",
@@ -488,7 +488,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.pflegeeinrichtungen",
           "title": "pflegeeinrichtungen",
           "layerName": "pflegeeinrichtungen",
@@ -507,7 +507,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.schulen",
           "title": "schulen",
           "layerName": "schulen",
@@ -525,7 +525,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.schulsprengel",
           "title": "schulsprengel",
           "layerName": "schulsprengel",
@@ -536,7 +536,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.sozialraumorientierung",
           "title": "sozialraumorientierung",
           "layerName": "sozialraumorientierung",
@@ -550,7 +550,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.universitaet",
           "title": "universitaet",
           "layerName": "universitaet",
@@ -561,7 +561,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "bildungWissenschaftUndSoziales.wissenschaftliche_einrichtungen",
           "title": "wissenschaftliche_einrichtungen",
           "layerName": "wissenschaftliche_einrichtungen",
@@ -572,7 +572,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.baeckereien",
           "title": "baeckereien",
           "layerName": "baeckereien",
@@ -583,7 +583,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.banken",
           "title": "banken",
           "layerName": "banken",
@@ -594,7 +594,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.bau_gartenmaerkte",
           "title": "bau_gartenmaerkte",
           "layerName": "bau_gartenmaerkte",
@@ -609,7 +609,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.drogerien",
           "title": "drogerien",
           "layerName": "drogerien",
@@ -620,7 +620,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.fahrradlaeden",
           "title": "fahrradlaeden",
           "layerName": "fahrradlaeden",
@@ -631,7 +631,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.gaststaetten",
           "title": "gaststaetten",
           "layerName": "gaststaetten",
@@ -647,7 +647,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.geldautomaten",
           "title": "geldautomaten",
           "layerName": "geldautomaten",
@@ -658,7 +658,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.getraenkemaerkte",
           "title": "getraenkemaerkte",
           "layerName": "getraenkemaerkte",
@@ -669,7 +669,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.lieferservices",
           "title": "lieferservices",
           "layerName": "lieferservices",
@@ -680,7 +680,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.paketautomaten",
           "title": "paketautomaten",
           "layerName": "paketautomaten",
@@ -691,7 +691,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.postbriefkaesten",
           "title": "postbriefkaesten",
           "layerName": "postbriefkaesten",
@@ -702,7 +702,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.poststellen",
           "title": "poststellen",
           "layerName": "poststellen",
@@ -713,7 +713,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.sozialkaufhaeuser_umsonstlaeden",
           "title": "sozialkaufhaeuser_umsonstlaeden",
           "layerName": "sozialkaufhaeuser_umsonstlaeden",
@@ -727,7 +727,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.supermaerkte",
           "title": "supermaerkte",
           "layerName": "supermaerkte",
@@ -747,7 +747,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "dienstleistungenUndEinzelhandel.wochenmaerkte",
           "title": "wochenmaerkte",
           "layerName": "wochenmaerkte",
@@ -768,7 +768,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "energieversorgung.geothermiepotential",
           "title": "geothermiepotential",
           "layerName": "geothermiepotential",
@@ -782,7 +782,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "energieversorgung.solarpotential",
           "title": "solarpotential",
           "layerName": "solarpotential",
@@ -798,7 +798,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "energieversorgung.waermebedarfsraster",
           "title": "waermebedarfsraster",
           "layerName": "waermebedarfsraster",
@@ -809,7 +809,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "energieversorgung.waermeplankarte",
           "title": "waermeplankarte",
           "layerName": "waermeplankarte",
@@ -825,7 +825,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "energieversorgung.windenergieanlagen",
           "title": "windenergieanlagen",
           "layerName": "windenergieanlagen",
@@ -836,7 +836,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "geologieUndBoden.konzeptbodenkarte2018",
           "title": "konzeptbodenkarte2018",
           "layerName": "konzeptbodenkarte2018",
@@ -850,7 +850,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "geologieUndBoden.stadtbodenkarte2005",
           "title": "stadtbodenkarte2005",
           "layerName": "stadtbodenkarte2005",
@@ -868,7 +868,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.aerztehaeuser",
           "title": "aerztehaeuser",
           "layerName": "aerztehaeuser",
@@ -879,7 +879,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.apotheken",
           "title": "apotheken",
           "layerName": "apotheken",
@@ -890,7 +890,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.augenoptiker",
           "title": "augenoptiker",
           "layerName": "augenoptiker",
@@ -901,7 +901,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.blutspendeeinrichtungen",
           "title": "blutspendeeinrichtungen",
           "layerName": "blutspendeeinrichtungen",
@@ -912,7 +912,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.hoergeraeteakustiker",
           "title": "hoergeraeteakustiker",
           "layerName": "hoergeraeteakustiker",
@@ -923,7 +923,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.hoergeraeteakustiker",
           "title": "hoergeraeteakustiker",
           "layerName": "hoergeraeteakustiker",
@@ -934,7 +934,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.kliniken",
           "title": "kliniken",
           "layerName": "kliniken",
@@ -945,7 +945,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gesundheit.krankenkassen",
           "title": "krankenkassen",
           "layerName": "krankenkassen",
@@ -956,7 +956,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "gutachterausschuss.bodenrichtwerte",
           "title": "bodenrichtwerte",
           "layerName": "bodenrichtwerte",
@@ -987,7 +987,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "hafenUndSchifffahrt.fischereiangelegenheiten",
           "title": "fischereiangelegenheiten",
           "layerName": "fischereiangelegenheiten",
@@ -1001,7 +1001,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "hafenUndSchifffahrt.schiffsliegeplaetze",
           "title": "schiffsliegeplaetze",
           "layerName": "schiffsliegeplaetze",
@@ -1012,7 +1012,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.bodenschaetzungskarten",
           "title": "bodenschaetzungskarten",
           "layerName": "bodenschaetzungskarten",
@@ -1026,7 +1026,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.flurkarte_1902",
           "title": "flurkarte_1902",
           "layerName": "flurkarte_1902",
@@ -1037,7 +1037,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.flurkarte_1930",
           "title": "flurkarte_1930",
           "layerName": "flurkarte_1930",
@@ -1048,7 +1048,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.messtischblatt_1888",
           "title": "messtischblatt_1888",
           "layerName": "messtischblatt_1888",
@@ -1059,7 +1059,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.plan-von-rostock_1911",
           "title": "plan-von-rostock_1911",
           "layerName": "plan-von-rostock_1911",
@@ -1070,7 +1070,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.schmettau_1788",
           "title": "schmettau_1788",
           "layerName": "schmettau_1788",
@@ -1081,7 +1081,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.stadtplan_1814",
           "title": "stadtplan_1814",
           "layerName": "stadtplan_1814",
@@ -1092,7 +1092,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.stadtplan_1859",
           "title": "stadtplan_1859",
           "layerName": "stadtplan_1859",
@@ -1103,7 +1103,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.stadtplan_1872",
           "title": "stadtplan_1872",
           "layerName": "stadtplan_1872",
@@ -1114,7 +1114,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.stadtplan_1889",
           "title": "stadtplan_1889",
           "layerName": "stadtplan_1889",
@@ -1125,7 +1125,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.stadtplan_1939",
           "title": "stadtplan_1939",
           "layerName": "stadtplan_1939",
@@ -1136,7 +1136,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.tarnow_1790",
           "title": "tarnow_1790",
           "layerName": "tarnow_1790",
@@ -1180,7 +1180,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "historischeKarten.wiebeking_1786",
           "title": "wiebeking_1786",
           "layerName": "wiebeking_1786",
@@ -1191,7 +1191,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.adressen",
           "title": "adressen",
           "layerName": "adressen",
@@ -1202,7 +1202,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.adressen",
           "title": "adressen",
           "layerName": "adressen",
@@ -1213,7 +1213,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.bewirtschaftungskataster",
           "title": "bewirtschaftungskataster",
           "layerName": "bewirtschaftungskataster",
@@ -1224,7 +1224,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.fluren",
           "title": "fluren",
           "layerName": "fluren",
@@ -1235,7 +1235,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.fluren",
           "title": "fluren",
           "layerName": "fluren",
@@ -1246,7 +1246,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.flurstuecke_hro",
           "title": "flurstuecke_hro",
           "layerName": "flurstuecke_hro",
@@ -1257,7 +1257,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.flurstuecke_mv",
           "title": "flurstuecke_mv",
           "layerName": "flurstuecke_mv",
@@ -1268,7 +1268,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.gemarkungen",
           "title": "gemarkungen",
           "layerName": "gemarkungen",
@@ -1279,7 +1279,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.geografischeBezeichnungen",
           "title": "geografischeBezeichnungen",
           "layerName": "geografischeBezeichnungen",
@@ -1290,7 +1290,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.strassen",
           "title": "strassen",
           "layerName": "strassen",
@@ -1301,7 +1301,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "katasterUndLiegenschaften.tnAktualisierung",
           "title": "tnAktualisierung",
           "layerName": "tnAktualisierung",
@@ -1312,7 +1312,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.bibliotheken",
           "title": "bibliotheken",
           "layerName": "bibliotheken",
@@ -1323,7 +1323,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.buehnen_theater",
           "title": "buehnen_theater",
           "layerName": "buehnen_theater",
@@ -1334,7 +1334,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.denkmale",
           "title": "denkmale",
           "layerName": "denkmale",
@@ -1345,7 +1345,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.denksteine",
           "title": "denksteine",
           "layerName": "denksteine",
@@ -1356,7 +1356,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.fitnessstudios",
           "title": "fitnessstudios",
           "layerName": "fitnessstudios",
@@ -1367,7 +1367,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.freizeitsport",
           "title": "freizeitsport",
           "layerName": "freizeitsport",
@@ -1378,7 +1378,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.galerien",
           "title": "galerien",
           "layerName": "galerien",
@@ -1389,7 +1389,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.kinos",
           "title": "kinos",
           "layerName": "kinos",
@@ -1400,7 +1400,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.kunst_im_oeffentlichen_raum",
           "title": "kunst_im_oeffentlichen_raum",
           "layerName": "kunst_im_oeffentlichen_raum",
@@ -1411,7 +1411,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.museen",
           "title": "museen",
           "layerName": "museen",
@@ -1422,7 +1422,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.musikclubs",
           "title": "musikclubs",
           "layerName": "musikclubs",
@@ -1433,7 +1433,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.musikschulen",
           "title": "musikschulen",
           "layerName": "musikschulen",
@@ -1444,7 +1444,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.schwimmbaeder",
           "title": "schwimmbaeder",
           "layerName": "schwimmbaeder",
@@ -1459,7 +1459,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.spielplaetze",
           "title": "spielplaetze",
           "layerName": "spielplaetze",
@@ -1470,7 +1470,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.sportanlagen",
           "title": "sportanlagen",
           "layerName": "sportanlagen",
@@ -1481,7 +1481,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.sporthallen",
           "title": "sporthallen",
           "layerName": "sporthallen",
@@ -1492,7 +1492,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.tanzschulen",
           "title": "tanzschulen",
           "layerName": "tanzschulen",
@@ -1503,7 +1503,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.vereine",
           "title": "vereine",
           "layerName": "vereine",
@@ -1514,7 +1514,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "kulturFreizeitSportUndVereine.wassersportanlagen",
           "title": "wassersportanlagen",
           "layerName": "wassersportanlagen",
@@ -1574,7 +1574,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_1938",
           "title": "luftbild_1938",
           "layerName": "luftbild_1938",
@@ -1596,7 +1596,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_1983",
           "title": "luftbild_1983",
           "layerName": "luftbild_1983",
@@ -1607,7 +1607,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_1988",
           "title": "luftbild_1988",
           "layerName": "luftbild_1988",
@@ -1618,7 +1618,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_1991",
           "title": "luftbild_1991",
           "layerName": "luftbild_1991",
@@ -1629,7 +1629,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_2000",
           "title": "luftbild_2000",
           "layerName": "luftbild_2000",
@@ -1640,7 +1640,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_2001",
           "title": "luftbild_2001",
           "layerName": "luftbild_2001",
@@ -1651,7 +1651,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_2002",
           "title": "luftbild_2002",
           "layerName": "luftbild_2002",
@@ -1662,7 +1662,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_2011",
           "title": "luftbild_2011",
           "layerName": "luftbild_2011",
@@ -1714,7 +1714,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_rostock-city_2007",
           "title": "luftbild_rostock-city_2007",
           "layerName": "luftbild_rostock-city_2007",
@@ -1725,7 +1725,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_rostocker_heide_2012",
           "title": "luftbild_rostocker_heide_2012",
           "layerName": "luftbild_rostocker_heide_2012",
@@ -1736,7 +1736,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "luftbilderUndGelaendedarstellungen.luftbild_rostocker_heide_2014",
           "title": "luftbild_rostocker_heide_2014",
           "layerName": "luftbild_rostocker_heide_2014",
@@ -1747,7 +1747,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "naturGruenpflegeUndLandwirtschaft.baeume",
           "title": "baeume",
           "layerName": "baeume",
@@ -1768,7 +1768,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "naturGruenpflegeUndLandwirtschaft.gruenpflegeobjekte",
           "title": "gruenpflegeobjekte",
           "layerName": "gruenpflegeobjekte",
@@ -1784,7 +1784,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "naturGruenpflegeUndLandwirtschaft.kleingartenalangen",
           "title": "kleingartenalangen",
           "layerName": "kleingartenalangen",
@@ -1806,7 +1806,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "naturGruenpflegeUndLandwirtschaft.mv_a2_schutzgeb_wms",
           "title": "mv_a2_schutzgeb_wms",
           "layerName": "mv_a2_schutzgeb_wms",
@@ -1817,7 +1817,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "naturGruenpflegeUndLandwirtschaft.naturdenkmale",
           "title": "naturdenkmale",
           "layerName": "naturdenkmale",
@@ -1856,7 +1856,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.abfallbehaelter",
           "title": "abfallbehaelter",
           "layerName": "abfallbehaelter",
@@ -1867,7 +1867,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.altkleidercontainer",
           "title": "altkleidercontainer",
           "layerName": "altkleidercontainer",
@@ -1878,7 +1878,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.baenke",
           "title": "baenke",
           "layerName": "baenke",
@@ -1889,7 +1889,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.feuerwachen",
           "title": "feuerwachen",
           "layerName": "feuerwachen",
@@ -1900,7 +1900,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.friedhoefe",
           "title": "friedhoefe",
           "layerName": "friedhoefe",
@@ -1911,7 +1911,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.glascontainer",
           "title": "glascontainer",
           "layerName": "glascontainer",
@@ -1922,7 +1922,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.hundetoiletten",
           "title": "hundetoiletten",
           "layerName": "hundetoiletten",
@@ -1933,7 +1933,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.ingenieurbauwerke",
           "title": "ingenieurbauwerke",
           "layerName": "ingenieurbauwerke",
@@ -1944,7 +1944,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.leuchten",
           "title": "leuchten",
           "layerName": "leuchten",
@@ -1958,7 +1958,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.lichtsignalanlagen",
           "title": "lichtsignalanlagen",
           "layerName": "lichtsignalanlagen",
@@ -1969,7 +1969,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.mobilfunkantennen",
           "title": "mobilfunkantennen",
           "layerName": "mobilfunkantennen",
@@ -1980,7 +1980,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.papiercontainer",
           "title": "papiercontainer",
           "layerName": "papiercontainer",
@@ -1991,7 +1991,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.parkanlagen",
           "title": "parkanlagen",
           "layerName": "parkanlagen",
@@ -2002,7 +2002,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.polizeidienststellen",
           "title": "polizeidienststellen",
           "layerName": "polizeidienststellen",
@@ -2013,7 +2013,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.recyclinghoefe",
           "title": "recyclinghoefe",
           "layerName": "recyclinghoefe",
@@ -2024,7 +2024,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.rettungswachen",
           "title": "rettungswachen",
           "layerName": "rettungswachen",
@@ -2035,7 +2035,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.sonstige_bauwerke",
           "title": "sonstige_bauwerke",
           "layerName": "sonstige_bauwerke",
@@ -2046,7 +2046,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.springbrunnen_wasserspiele",
           "title": "springbrunnen_wasserspiele",
           "layerName": "springbrunnen_wasserspiele",
@@ -2057,7 +2057,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.toiletten",
           "title": "toiletten",
           "layerName": "toiletten",
@@ -2068,7 +2068,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.trinkwassernotbrunnen",
           "title": "trinkwassernotbrunnen",
           "layerName": "trinkwassernotbrunnen",
@@ -2079,7 +2079,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "staedtischeInfrastruktur.trinkwasserspender",
           "title": "trinkwasserspender",
           "layerName": "trinkwasserspender",
@@ -2090,7 +2090,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.gemarkungen_mv",
           "title": "gemarkungen_mv",
           "layerName": "gemarkungen_mv",
@@ -2101,7 +2101,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.gemeinden_mv",
           "title": "gemeinden_mv",
           "layerName": "gemeinden_mv",
@@ -2112,7 +2112,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.gemeindeteile",
           "title": "gemeindeteile",
           "layerName": "gemeindeteile",
@@ -2123,7 +2123,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.gemeindeverbaende",
           "title": "gemeindeverbaende",
           "layerName": "gemeindeverbaende",
@@ -2134,7 +2134,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.geografische_bezeichnungen_mv",
           "title": "geografische_bezeichnungen_mv",
           "layerName": "geografische_bezeichnungen_mv",
@@ -2145,7 +2145,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.gerichtsbezirke",
           "title": "gerichtsbezirke",
           "layerName": "gerichtsbezirke",
@@ -2160,7 +2160,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.kehrbezirke",
           "title": "kehrbezirke",
           "layerName": "kehrbezirke",
@@ -2171,7 +2171,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.kreise",
           "title": "kreise",
           "layerName": "kreise",
@@ -2182,7 +2182,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.olc",
           "title": "olc",
           "layerName": "olc",
@@ -2198,7 +2198,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.ortsamtsbereiche",
           "title": "ortsamtsbereiche",
           "layerName": "ortsamtsbereiche",
@@ -2209,7 +2209,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.ortsbeiratsbereiche",
           "title": "ortsbeiratsbereiche",
           "layerName": "ortsbeiratsbereiche",
@@ -2220,7 +2220,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.ortsteile",
           "title": "ortsteile",
           "layerName": "ortsteile",
@@ -2231,7 +2231,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.postleitzahlengebiete",
           "title": "postleitzahlengebiete",
           "layerName": "postleitzahlengebiete",
@@ -2242,7 +2242,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.stadtbereiche",
           "title": "stadtbereiche",
           "layerName": "stadtbereiche",
@@ -2253,7 +2253,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.statistische_bezirke",
           "title": "statistische_bezirke",
           "layerName": "statistische_bezirke",
@@ -2264,7 +2264,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "statistikenUndUebersichten.statistische_bloecke",
           "title": "statistische_bloecke",
           "layerName": "statistische_bloecke",
@@ -2275,7 +2275,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.rostocker_heide",
           "title": "rostocker_heide",
           "layerName": "rostocker_heide",
@@ -2295,7 +2295,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.sehenswuerdigkeiten",
           "title": "sehenswuerdigkeiten",
           "layerName": "sehenswuerdigkeiten",
@@ -2306,7 +2306,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.strand",
           "title": "strand",
           "layerName": "strand",
@@ -2322,7 +2322,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.thalasso_kurwege",
           "title": "thalasso_kurwege",
           "layerName": "thalasso_kurwege",
@@ -2333,7 +2333,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.touristeninformationsbueros",
           "title": "touristeninformationsbueros",
           "layerName": "touristeninformationsbueros",
@@ -2344,7 +2344,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "tourismus.unterkuenfte",
           "title": "unterkuenfte",
           "layerName": "unterkuenfte",
@@ -2361,7 +2361,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.geh_und_radwegereinigung",
           "title": "geh_und_radwegereinigung",
           "layerName": "geh_und_radwegereinigung",
@@ -2375,7 +2375,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.geh_und_radwegereinigung",
           "title": "geh_und_radwegereinigung",
           "layerName": "geh_und_radwegereinigung",
@@ -2386,7 +2386,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.landschaftsplaene",
           "title": "landschaftsplaene",
           "layerName": "landschaftsplaene",
@@ -2397,7 +2397,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.luftmessstationen",
           "title": "luftmessstationen",
           "layerName": "luftmessstationen",
@@ -2408,7 +2408,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.luftqualitaet",
           "title": "luftqualitaet",
           "layerName": "luftqualitaet",
@@ -2424,7 +2424,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.realnutzungskartierung",
           "title": "realnutzungskartierung",
           "layerName": "realnutzungskartierung",
@@ -2440,7 +2440,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.reinigungsreviere",
           "title": "reinigungsreviere",
           "layerName": "reinigungsreviere",
@@ -2451,7 +2451,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.ruhige_gebiete",
           "title": "ruhige_gebiete",
           "layerName": "ruhige_gebiete",
@@ -2462,7 +2462,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.stadtklimaanalyse",
           "title": "stadtklimaanalyse",
           "layerName": "stadtklimaanalyse",
@@ -2479,7 +2479,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.stadtklimaPlanungshinweise",
           "title": "stadtklimaPlanungshinweise",
           "layerName": "stadtklimaPlanungshinweise",
@@ -2495,7 +2495,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.strassenreinigung",
           "title": "strassenreinigung",
           "layerName": "strassenreinigung",
@@ -2506,7 +2506,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "umweltUndKlima.strassenwinterdienst",
           "title": "strassenwinterdienst",
           "layerName": "strassenwinterdienst",
@@ -2517,7 +2517,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.abstellflaechen_e_tretroller",
           "title": "abstellflaechen_e_tretroller",
           "layerName": "abstellflaechen_e_tretroller",
@@ -2528,7 +2528,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.baustellen",
           "title": "baustellen",
           "layerName": "baustellen",
@@ -2539,7 +2539,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.baustellen_geplant",
           "title": "baustellen_geplant",
           "layerName": "baustellen_geplant",
@@ -2560,7 +2560,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.bewohnerparkgebiete",
           "title": "bewohnerparkgebiete",
           "layerName": "bewohnerparkgebiete",
@@ -2571,7 +2571,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.faehranleger",
           "title": "faehranleger",
           "layerName": "faehranleger",
@@ -2582,7 +2582,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.fahrradparken",
           "title": "fahrradparken",
           "layerName": "fahrradparken",
@@ -2597,7 +2597,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.fahrradreparatursets",
           "title": "fahrradreparatursets",
           "layerName": "fahrradreparatursets",
@@ -2608,7 +2608,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.fussgaengerueberwege",
           "title": "fussgaengerueberwege",
           "layerName": "fussgaengerueberwege",
@@ -2619,7 +2619,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.grossraum_schwertransportrouten",
           "title": "grossraum_schwertransportrouten",
           "layerName": "grossraum_schwertransportrouten",
@@ -2633,7 +2633,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.haltestellen",
           "title": "haltestellen",
           "layerName": "haltestellen",
@@ -2662,7 +2662,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.ladestationen_elektrofahrzeuge",
           "title": "ladestationen_elektrofahrzeuge",
           "layerName": "ladestationen_elektrofahrzeuge",
@@ -2673,7 +2673,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.mobilpunkte",
           "title": "mobilpunkte",
           "layerName": "mobilpunkte",
@@ -2684,7 +2684,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.parkmoeglichkeiten",
           "title": "parkmoeglichkeiten",
           "layerName": "parkmoeglichkeiten",
@@ -2699,7 +2699,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.parkscheinautomaten",
           "title": "parkscheinautomaten",
           "layerName": "parkscheinautomaten",
@@ -2710,7 +2710,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.radmonitore",
           "title": "radmonitore",
           "layerName": "radmonitore",
@@ -2721,7 +2721,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.reisebusparkplaetze_terminals",
           "title": "reisebusparkplaetze_terminals",
           "layerName": "reisebusparkplaetze_terminals",
@@ -2735,7 +2735,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.stadtbuslinien",
           "title": "stadtbuslinien",
           "layerName": "stadtbuslinien",
@@ -2746,7 +2746,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.strassenbahnlinien",
           "title": "strassenbahnlinien",
           "layerName": "strassenbahnlinien",
@@ -2757,7 +2757,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.tankstellen",
           "title": "tankstellen",
           "layerName": "tankstellen",
@@ -2768,7 +2768,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.taxistaende",
           "title": "taxistaende",
           "layerName": "taxistaende",
@@ -2779,7 +2779,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.verkehrszeichen",
           "title": "verkehrszeichen",
           "layerName": "verkehrszeichen",
@@ -2790,7 +2790,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verkehr.versenkpoller",
           "title": "versenkpoller",
           "layerName": "versenkpoller",
@@ -2801,7 +2801,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verwaltungpolitikundwahlen.Behoerden",
           "title": "Behoerden",
           "layerName": "Behoerden",
@@ -2815,7 +2815,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "verwaltungpolitikundwahlen.bundestagswahl_2025",
           "title": "bundestagswahl_2025",
           "layerName": "bundestagswahl_2025",
@@ -2829,7 +2829,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "wasser.Fließgewässer",
           "title": "Fließgewässer",
           "layerName": "Fließgewässer",
@@ -2843,7 +2843,7 @@
           "initOpen": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "wasser.historischeGewaesserlaeufe",
           "title": "historischeGewaesserlaeufe",
           "layerName": "historischeGewaesserlaeufe",
@@ -2854,7 +2854,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "wasser.Hoch anstehendes Grundwasser",
           "title": "Hoch anstehendes Grundwasser",
           "layerName": "Hoch anstehendes Grundwasser",
@@ -2865,7 +2865,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "wasser.Hochwassergefahrenkarte",
           "title": "Hochwassergefahrenkarte",
           "layerName": "Hochwassergefahrenkarte",
@@ -2922,7 +2922,7 @@
           "showWhenNotSupported": false
         },
         {
-          "type": "ContentTreeItemMetadata",
+          "type": "WMSGroupContentTreeItemMetadata",
           "name": "wasser.Schoepfwerkeinflussbereiche",
           "title": "Schoepfwerkeinflussbereiche",
           "layerName": "Schoepfwerkeinflussbereiche",
