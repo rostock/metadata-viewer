@@ -15,7 +15,7 @@
           <VChip
             v-for="(kw, idx) in metadata.tags || []"
             :key="idx"
-            style="background-color: base-lighten-3; color: blue;"
+            style="background-color: rgb(var(--v-theme-primary)); color: rgb(var(--v-theme-base-lighten-5));"
             variant="tonal"
           >
             {{ kw }}
@@ -29,7 +29,7 @@
             :href="metadata.license"
             target="_blank"
             variant="tonal"
-            style="background-color: base-lighten-3; color: red;"
+            style="background-color: rgb(209, 5, 12); color: rgb(var(--v-theme-base-lighten-5));"
             class="license-chip"
           >
             <VIcon class="icon-bold">mdi-copyright</VIcon>
@@ -88,7 +88,8 @@
               </table>
               
               <!-- Autoren -->
-              <div v-if="repository.authors" class="d-flex justify-left py-4">
+              <!--<div v-if="repository.authors" class="d-flex justify-left py-4">-->
+              <div v-if="repository.authors">  
                 <v-list class="author-list">
                 <v-list-item-title><span class="highlight">Autoren:</span></v-list-item-title>
                   <v-list-item v-for="(author, author_index) in repository.authors" :key="author_index">
@@ -333,7 +334,7 @@ openDialog();
 .publisher-list{
   font-size: 0.9rem;
   font-weight: bold;
-  color: #555;
+  color: rgb(var(--v-theme-base-primary));
 }
 
 span.highlight
@@ -350,6 +351,6 @@ th, td {
   padding: 3px;
   text-align: left;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {background-color:rgb(var(--v-theme-base-lighten-3));}
 
 </style>

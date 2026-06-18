@@ -67,6 +67,9 @@ class WMSGroupContentTreeItemMetadata extends WMSGroupContentTreeItem {
               headerIcon: '$vcsInfo'
             },            
             slot: WindowSlot.DYNAMIC_LEFT,
+            position:{
+              width: '500px',
+            }
           },
           
           this._app.windowManager,

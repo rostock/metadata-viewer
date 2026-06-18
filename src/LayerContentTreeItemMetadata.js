@@ -64,9 +64,12 @@ class LayerContentTreeItemMetadata extends LayerContentTreeItem {
             },
             state: {
               headerTitle: 'Metadaten',
-              headerIcon: '$vcsInfo'
+              headerIcon: '$vcsInfo',
             },            
             slot: WindowSlot.DYNAMIC_LEFT,
+            position:{
+              width: '500px',
+            }
           },
           
           this._app.windowManager,
