@@ -7,21 +7,6 @@
         <div class="title-text px-4 text-h7 font-weight-bold">
           {{ metadata.title || 'Metadaten' }}
         </div>
-      </v-card-title>
-      <!-- Keywords + Lizenz -->
-      <div class="d-flex justify-space-between align-start mb-4 keywords-license px-4 py-2">
-        <!-- Keywords links -->
-        <div class="keywords">
-          <VChip
-            v-for="(kw, idx) in metadata.tags || []"
-            :key="idx"
-            style="background-color: rgb(var(--v-theme-primary)); color: rgb(var(--v-theme-base-lighten-5));"
-            variant="tonal"
-          >
-            {{ kw }}
-          </VChip>
-        </div>
-
         <!-- Lizenz rechts -->
         <div class="license">
           <VChip
@@ -33,6 +18,20 @@
             class="license-chip"
           >
             <VIcon class="icon-bold">mdi-copyright</VIcon>
+          </VChip>
+        </div>
+      </v-card-title>
+      <!-- Keywords + Lizenz -->
+      <div class="d-flex justify-space-between align-start mb-2 keywords-license px-4 py-2">
+        <!-- Keywords links -->
+        <div class="keywords">
+          <VChip
+            v-for="(kw, idx) in metadata.tags || []"
+            :key="idx"
+            style="background-color: rgb(var(--v-theme-primary)); color: rgb(var(--v-theme-base-lighten-5)); padding: 8px; margin: 2px;"
+            variant="tonal"
+          >
+            {{ kw }}
           </VChip>
         </div>
       </div>
@@ -51,7 +50,6 @@
                 <p v-if="metadata.publisher_name">{{ metadata.publisher_name }}</p>
                 <p v-if="metadata.publisher_email">
                   <v-chip
-                    color="primary"
                     variant="tonal"
                     class="email-chip"
                     :href="`mailto:${metadata.publisher_email}`"
@@ -62,6 +60,34 @@
                   </v-chip>
                 </p>
               </div>
+            </div>
+          </div>
+
+          <!-- Dienstverlinkungen -->
+          <hr><br>
+          <div v-if="metadata.links" class="d-flex justify-left align-center pa-2 flex-wrap ">
+            
+            <div class="d-flex justify-space-between align-start">
+                <VChip
+                v-for="(service, idx) in metadata.links || []"
+                :key="idx"
+                :href="service.link"
+                target="_blank"
+                variant="tonal"
+                class="link-chip"
+              >
+               {{ service.type }}
+              </VChip>
+            </div>
+            <div v-if="metadata.opendata">
+              <VChip
+                :href="metadata.opendata"
+                target="_blank"
+                variant="tonal"
+                class="link-chip"
+              >
+               OpenData
+              </VChip>
             </div>
           </div>
 
@@ -161,6 +187,9 @@ jsonObject.value = {
   "publisher_organization": "",
   "publisher_email": "",
   "license":"",
+  "links":[],
+  "serviceType":"",
+  "opendata":"",
   "tags": [],
   "repositories": [],
 };
@@ -184,7 +213,7 @@ async function openDialog(){
     if (props.infoUrl.startsWith("recordapi:")) {
       requestURL = props.infoUrl.replace("recordapi:", "");
       const metadataResponse = await request(requestURL)
-      console.log( metadataResponse);
+      //console.log( metadataResponse);
       jsonObject.value.title = metadataResponse.properties.title || "Metadaten";
       jsonObject.value.description = metadataResponse.properties.description;
       jsonObject.value.license = metadataResponse.properties.license;
@@ -202,14 +231,17 @@ async function openDialog(){
       };
 
       metadata.value = jsonObject.value
-      console.log(jsonObject)
+      //console.log(jsonObject)
       // TODO: Add Authors from repository
 
 
     } else if (props.infoUrl.startsWith("datenwerft:")) {
 
         requestURL = props.infoUrl.replace("datenwerft:", "");
-        const requestData = await request(requestURL)
+        const topicData = await request(requestURL)
+        //console.log(topicData)
+        const service = topicData.services[0]
+        const requestData = await request(service)
         //console.log(requestData)
 
         // get title/description info
@@ -237,6 +269,42 @@ async function openDialog(){
           const json_tags_data = await request(tag)
           jsonObject.value.tags.push(json_tags_data.title)
         }
+
+        // get links and service types
+        for (const serviceLink of topicData.services){
+          const service = {
+            "link": "",
+            "type": ""
+          }
+          const serviceData = await request(serviceLink)
+          if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMTS"))){
+          service.type = "WMTS"
+          }else if((serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMTS"))){
+          service.type = "INSPIRE WMTS"  
+          }
+          if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WFS"))){
+          service.type = "WFS"
+          }else if((serviceData.link.includes("inspire"))&&(serviceData.type.includes("WFS"))){
+          service.type = "INSPIRE WFS"
+          }
+          if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))&&(!(serviceData.type.includes("WMTS")))){
+          service.type = "WMS"
+          }else if((serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))&&(!(serviceData.type.includes("WMTS")))){
+          service.type = "INSPIRE WMS"  
+          }
+          service.link = serviceData.link
+          jsonObject.value.links.push(service)
+        }
+      
+        //OpenData
+        if (topicData.datasets[1]){
+          const opendataData = await request(topicData.datasets[0])
+          const opendataName = opendataData.name
+          const opendataURL = "https://www.opendata-hro.de/dataset/"+opendataName.split(".")[0]
+          jsonObject.value.opendata = opendataURL
+        }
+
+
         
       // TODO: Add Handling for multiple repos and display of repo info
 
@@ -311,7 +379,7 @@ openDialog();
 .keywords {
   display: flex;
   flex-wrap: wrap;
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .license {
@@ -335,6 +403,21 @@ openDialog();
   font-size: 0.9rem;
   font-weight: bold;
   color: rgb(var(--v-theme-base-primary));
+}
+
+.email-chip{
+  background-color: rgb(var(--v-theme-base-lighten-3)); 
+  margin-top: 3px;
+}
+
+.link-chip {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: rgb(var(--v-theme-primary)); 
+  color: rgb(var(--v-theme-base-lighten-5));
+  padding: 6px;
+  margin: 2px;
 }
 
 span.highlight
