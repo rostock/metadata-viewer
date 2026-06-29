@@ -244,8 +244,16 @@ async function openDialog(){
         requestURL = props.infoUrl.replace("datenwerft:", "");
         const topicData = await request(requestURL)
         //console.log(topicData)
-        const service = topicData.services[1]
-        const requestData = await request(service)
+        let serviceToAnalize = ""
+        for (const service of topicData.services){
+          const serviceData = await request(service)
+          if (serviceData.type.includes("WMS")){
+            serviceToAnalize = serviceData
+            break
+          }
+        }
+        
+        const requestData = serviceToAnalize
         //console.log(requestData)
 
         // get title/description info
