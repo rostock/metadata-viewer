@@ -28,8 +28,8 @@
           <VChip
             v-for="(kw, idx) in metadata.tags || []"
             :key="idx"
-            style="background-color: rgb(var(--v-theme-primary)); color: rgb(var(--v-theme-base-lighten-5)); padding: 8px; margin: 2px;"
-            variant="tonal"
+            style="color: rgb(var(--v-theme-primary)); padding: 8px; margin: 2px;"
+            variant="outlined"
           >
             {{ kw }}
           </VChip>
@@ -149,7 +149,11 @@
   
     <!-- Statusindikator und Fallback statt des Zentralen Div-->
     <div v-else class="text-center pa-4">
-      <div>{{status}}</div>
+      <div v-if="status == 'Lade Metadaten...'">
+        <v-progress-circular color="primary" indeterminate style="margin: 5px;"></v-progress-circular>
+        <div>{{status}}</div>
+      </div>
+      <div v-else> {{status}} </div>
     </div>
   </v-card>
 </template>
@@ -169,6 +173,7 @@ import {
   VListItem,
   VListItemTitle,
   VListItemSubtitle,
+  VProgressCircular,
 } from 'vuetify/components';
 import { toString } from 'ol/transform';
 import { VcsDataTable, VcsTable } from '@vcmap/ui';
@@ -196,7 +201,6 @@ jsonObject.value = {
 
 let status = ref()
 status.value = "Lade Metadaten..."
-
 
 
 // request function to get json from api
@@ -240,7 +244,7 @@ async function openDialog(){
         requestURL = props.infoUrl.replace("datenwerft:", "");
         const topicData = await request(requestURL)
         //console.log(topicData)
-        const service = topicData.services[0]
+        const service = topicData.services[1]
         const requestData = await request(service)
         //console.log(requestData)
 
@@ -291,6 +295,12 @@ async function openDialog(){
           service.type = "WMS"
           }else if((serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))&&(!(serviceData.type.includes("WMTS")))){
           service.type = "INSPIRE WMS"  
+          }
+          if (serviceData.type.includes("OGC API - Features")){
+          service.type = "OGC API - Features"  
+          }
+          if (serviceData.type.includes("WCS")){
+          service.type = "WCS"  
           }
           service.link = serviceData.link
           jsonObject.value.links.push(service)
