@@ -22,6 +22,7 @@ class WMSGroupContentTreeItemMetadata extends WMSGroupContentTreeItem {
      * @private
      */
     this._infoUrl = null;
+    this.allowedWMSLayers = options.allowedWMSLayers;
     this.infoUrl = options.infoUrl;
     this._destroyAction = null;
     this._app = app;
@@ -61,6 +62,7 @@ class WMSGroupContentTreeItemMetadata extends WMSGroupContentTreeItem {
             component: MetadataViewer,
             props: {
               infoUrl: this._infoUrl,
+              allowedWMSLayers: this.allowedWMSLayers,
             },
             state: {
               headerTitle: 'Metadaten',

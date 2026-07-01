@@ -21,10 +21,15 @@ class LayerContentTreeItemMetadata extends LayerContentTreeItem {
      * @type {string|null}
      * @private
      */
+
+
     this._infoUrl = null;
+    this.allowedWMSLayers = options.allowedWMSLayers;
     this.infoUrl = options.infoUrl;
     this._destroyAction = null;
     this._app = app;
+    
+
   }
 
   //ogcapi:https://geo.sv.rostock.de/metadata/collections/service/items/d0a4e64c-3743-48d6-a717-4b05473d9d39
@@ -61,6 +66,7 @@ class LayerContentTreeItemMetadata extends LayerContentTreeItem {
             component: MetadataViewer,
             props: {
               infoUrl: this._infoUrl,
+              allowedWMSLayers: this.allowedWMSLayers,
             },
             state: {
               headerTitle: 'Metadaten',

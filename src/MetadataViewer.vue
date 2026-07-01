@@ -179,7 +179,8 @@ import { toString } from 'ol/transform';
 import { VcsDataTable, VcsTable } from '@vcmap/ui';
 
 const props = defineProps({
-  infoUrl: { type: String, required: true }
+  infoUrl: { type: String, required: true, },
+  allowedWMSLayers: {type: Array, required: true,},
 });
 
 const metadata = ref();
@@ -254,7 +255,11 @@ async function openDialog(){
         }
         
         const requestData = serviceToAnalize
-        //console.log(requestData)
+        console.log(requestData)
+        //get used layer
+        const layer = props.allowedWMSLayers[0]
+        console.log(layer)
+        //get layer description
 
         // get title/description info
         jsonObject.value.title = requestData.title
@@ -309,6 +314,9 @@ async function openDialog(){
           }
           if (serviceData.type.includes("WCS")){
           service.type = "WCS"  
+          }
+          if (serviceData.type.includes("TMS")){
+          service.type = "TMS"  
           }
           service.link = serviceData.link
           jsonObject.value.links.push(service)
