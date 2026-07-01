@@ -65,9 +65,8 @@
 
           <!-- Dienstverlinkungen -->
           <hr><br>
-          <div v-if="metadata.links" class="d-flex justify-left align-center pa-2 flex-wrap ">
-            
-            <div class="d-flex justify-space-between align-start">
+          <div v-if="metadata.links" class="d-flex justify-left align-center pa-2 flex-wrap ">   
+            <div class="d-flex align-start flex-wrap">
                 <VChip
                 v-for="(service, idx) in metadata.links || []"
                 :key="idx"
@@ -78,16 +77,16 @@
               >
                {{ service.type }}
               </VChip>
+              <div v-if="metadata.opendata">
+                <VChip
+                  :href="metadata.opendata"
+                  target="_blank"
+                  variant="tonal"
+                  class="link-chip"
+                >
+                OpenData
+                </VChip>
             </div>
-            <div v-if="metadata.opendata">
-              <VChip
-                :href="metadata.opendata"
-                target="_blank"
-                variant="tonal"
-                class="link-chip"
-              >
-               OpenData
-              </VChip>
             </div>
           </div>
 
@@ -121,14 +120,14 @@
                   <v-list-item v-for="(author, author_index) in repository.authors" :key="author_index">
                       <table>
                         <tbody>
-                          <tr>
-                            <td><span class="highlight">Name: </span></td><td>{{ author.author_name }}</td>
+                          <tr v-if="author.author_name != 'null null'">
+                            <td class="colum1"><span class="highlight">Name: </span></td><td>{{ author.author_name }}</td>
                           </tr>
                           <tr>
-                            <td><span class="highlight">E-Mail: </span></td><td>{{ author.author_mail }}</td>
+                            <td class="colum1"><span class="highlight">E-Mail: </span></td><td>{{ author.author_mail }}</td>
                           </tr>
                           <tr>
-                            <td><span class="highlight">Organisation: </span></td><td>{{ author.author_organization }}</td>
+                            <td class="colum1"><span class="highlight">Organisation: </span></td><td>{{ author.author_organization }}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -206,10 +205,15 @@ status.value = "Lade Metadaten..."
 
 // request function to get json from api
 async function request(requestURL){
+  try{
   const response = await fetch(requestURL);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const data = await response.json();
   return data
+  }
+  catch(err){
+  return "none"
+  }
 }
 
 async function openDialog(){
@@ -248,17 +252,17 @@ async function openDialog(){
         let serviceToAnalize = ""
         for (const service of topicData.services){
           const serviceData = await request(service)
-          if (serviceData.type.includes("WMS")){
+          if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))){
             serviceToAnalize = serviceData
             break
           }
         }
         
         const requestData = serviceToAnalize
-        console.log(requestData)
+        //console.log(requestData)
         //get used layer
         const layer = props.allowedWMSLayers[0]
-        console.log(layer)
+        //console.log(layer)
         //get layer description
 
         // get title/description info
@@ -291,9 +295,15 @@ async function openDialog(){
         for (const serviceLink of topicData.services){
           const service = {
             "link": "",
-            "type": ""
+            "type": "",
           }
           const serviceData = await request(serviceLink)
+          // TODO: basierend auf Config entscheiden lasen
+          // skip internal services (with internal license)
+          if ((serviceData.legal=="https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/legal/9.json")||(serviceData.legal=="https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/legal/10.json")||(serviceData.legal=="https://geo.sv.rostock.de/datenwerft/api/gdihrometadata/legal/8.json")){
+            continue
+          }
+          // extract service type
           if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMTS"))){
           service.type = "WMTS"
           }else if((serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMTS"))){
@@ -318,16 +328,26 @@ async function openDialog(){
           if (serviceData.type.includes("TMS")){
           service.type = "TMS"  
           }
+          if (serviceData.type.includes("RSS")){
+          service.type = "GeoRSS"  
+          }
           service.link = serviceData.link
           jsonObject.value.links.push(service)
         }
       
-        //OpenData
-        if (topicData.datasets[1]){
-          const opendataData = await request(topicData.datasets[0])
-          const opendataName = opendataData.name
-          const opendataURL = "https://www.opendata-hro.de/dataset/"+opendataName.split(".")[0]
-          jsonObject.value.opendata = opendataURL
+        //create OpenData link from dataset links
+        if (topicData.datasets[2]){
+          for (const dataset of topicData.datasets){
+            const opendataData = await request(dataset)
+            // check if the dataset is opendata
+            if(opendataData.link.includes("opendata")){
+            const opendataName = opendataData.link.split("/")[5]      
+            const opendataURL = "https://www.opendata-hro.de/dataset/"+opendataName.split(".")[0]
+            jsonObject.value.opendata = opendataURL
+            break
+            }
+            
+          }
         }
 
 
@@ -376,7 +396,7 @@ async function openDialog(){
         
         
         metadata.value = jsonObject.value
-        console.log(metadata)
+        //console.log(metadata)
 
     }
     } catch (err) {
@@ -456,10 +476,15 @@ table {
   width: 100%;
 }
 
+.colum1 {
+  min-width: 25% 
+}
+
 th, td {
   padding: 3px;
   text-align: left;
 }
+
 tr:nth-child(even) {background-color:rgb(var(--v-theme-base-lighten-3));}
 
 </style>
