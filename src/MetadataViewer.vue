@@ -121,13 +121,13 @@
                       <table>
                         <tbody>
                           <tr v-if="author.author_name != 'null null'">
-                            <td class="colum1"><span class="highlight">Name: </span></td><td>{{ author.author_name }}</td>
+                            <td class="column1"><span class="highlight">Name: </span></td><td>{{ author.author_name }}</td>
                           </tr>
                           <tr>
-                            <td class="colum1"><span class="highlight">E-Mail: </span></td><td>{{ author.author_mail }}</td>
+                            <td class="column1"><span class="highlight">E-Mail: </span></td><td>{{ author.author_mail }}</td>
                           </tr>
                           <tr>
-                            <td class="colum1"><span class="highlight">Organisation: </span></td><td>{{ author.author_organization }}</td>
+                            <td class="column1"><span class="highlight">Organisation: </span></td><td>{{ author.author_organization }}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -476,8 +476,8 @@ table {
   width: 100%;
 }
 
-.colum1 {
-  min-width: 25% 
+.column1 {
+  width: 25% 
 }
 
 th, td {
