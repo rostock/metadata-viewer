@@ -246,17 +246,29 @@ async function openDialog(){
 
     } else if (props.infoUrl.startsWith("datenwerft:")) {
 
+      // get URL data
         requestURL = props.infoUrl.replace("datenwerft:", "");
-        const topicData = await request(requestURL)
+        let topicData = await request(requestURL)
         //console.log(topicData)
         let serviceToAnalize = ""
-        for (const service of topicData.services){
-          const serviceData = await request(service)
-          if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))){
-            serviceToAnalize = serviceData
-            break
+        // check if the given URL is for a topic or service
+        if (topicData.type){
+          // use the given service url directly
+          serviceToAnalize = topicData
+          // url leads to service --> set it to actual topic
+          topicData = await request(topicData.topics[0])
+          //console.log(topicData)
+        } else {
+            for (const service of topicData.services){
+              const serviceData = await request(service)
+              if (!(serviceData.link.includes("inspire"))&&(serviceData.type.includes("WMS"))){
+                serviceToAnalize = serviceData
+                break
+              }
+            }
           }
-        }
+          
+        
         
         const requestData = serviceToAnalize
         //console.log(requestData)
@@ -285,11 +297,13 @@ async function openDialog(){
         jsonObject.value.license = json_license_data.code
 
         // get tags info
-        const requestURLTags = requestData.tags
-        for (const tag of requestURLTags){
-          const json_tags_data = await request(tag)
-          jsonObject.value.tags.push(json_tags_data.title)
-        }
+        try{
+          const requestURLTags = requestData.tags
+          for (const tag of requestURLTags){
+            const json_tags_data = await request(tag)
+            jsonObject.value.tags.push(json_tags_data.title)
+          }
+        } catch {}
 
         // get links and service types
         for (const serviceLink of topicData.services){
@@ -336,19 +350,20 @@ async function openDialog(){
         }
       
         //create OpenData link from dataset links
-        if (topicData.datasets[2]){
-          for (const dataset of topicData.datasets){
-            const opendataData = await request(dataset)
-            // check if the dataset is opendata
-            if(opendataData.link.includes("opendata")){
-            const opendataName = opendataData.link.split("/")[5]      
-            const opendataURL = "https://www.opendata-hro.de/dataset/"+opendataName.split(".")[0]
-            jsonObject.value.opendata = opendataURL
-            break
+        try{
+          if (topicData.datasets[2]){
+            for (const dataset of topicData.datasets){
+              const opendataData = await request(dataset)
+              // check if the dataset is opendata
+              if(opendataData.link.includes("opendata")){
+              const opendataName = opendataData.link.split("/")[5]      
+              const opendataURL = "https://www.opendata-hro.de/dataset/"+opendataName.split(".")[0]
+              jsonObject.value.opendata = opendataURL
+              break
+              }     
             }
-            
           }
-        }
+        } catch {}
 
 
         
