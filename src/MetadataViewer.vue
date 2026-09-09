@@ -94,7 +94,7 @@
           <div v-if="metadata.repositories[0]">
             <br><hr><br>
             <div v-for="(repository, repo_index) in metadata.repositories" :key="repo_index">
-              <span class="highlight">Datenquelle:</span><br>
+              <span class="highlight">Datenquelle: </span><span>{{ repository.description }}</span><br>
               <table>
                 <tbody>
                   <tr>
@@ -241,8 +241,6 @@ async function openDialog(){
 
       metadata.value = jsonObject.value
       //console.log(jsonObject)
-      // TODO: Add Authors from repository
-
 
     } else if (props.infoUrl.startsWith("datenwerft:")) {
 
@@ -303,7 +301,9 @@ async function openDialog(){
             const json_tags_data = await request(tag)
             jsonObject.value.tags.push(json_tags_data.title)
           }
-        } catch {}
+        } catch (error){
+          console.error('Fehler beim Laden der Tags:', error);
+        }
 
         // get links and service types
         for (const serviceLink of topicData.services){
@@ -363,16 +363,15 @@ async function openDialog(){
               }     
             }
           }
-        } catch {}
-
-
-        
-      // TODO: Add Handling for multiple repos and display of repo info
+        } catch (error){
+          console.error('Fehler beim Laden der OpenData Links:', error);
+        }
 
         // get repo info 
         const requestURLRepo = requestData.repositories
         for (const repo of requestURLRepo){
           const repository = {
+            "description": "",
             "authors": [],
             "last_update":"",
             "update_frequency":""
@@ -386,7 +385,15 @@ async function openDialog(){
           repository.last_update = date_formated
           const requestURLUpdateFrequency = json_repo_data.update_frequency
           const json_updateFrequency_data = await request(requestURLUpdateFrequency)
-          repository.update_frequency = json_updateFrequency_data.title          
+          repository.update_frequency = json_updateFrequency_data.title
+          
+          // get repo description
+          try{
+          const description = json_repo_data.description
+          repository.description = description
+          } catch (error){
+            console.error('Fehler beim Laden der Datenquellenbeschreibung:', error);
+          }
        
           // get authors info
           const requestURLAuthors = json_repo_data.authors
@@ -408,14 +415,12 @@ async function openDialog(){
           jsonObject.value.repositories.push(repository)
         }
          
-        
-        
         metadata.value = jsonObject.value
         //console.log(metadata)
 
     }
-    } catch (err) {
-      console.error('Fehler beim Laden der Metadaten:', err);
+    } catch (error) {
+      console.error('Fehler beim Laden der Metadaten:', error);
       status.value = "Keine Metadateninformationen vorhanden."
     };
 }
